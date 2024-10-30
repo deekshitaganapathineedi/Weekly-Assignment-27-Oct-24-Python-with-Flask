@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Feedback</h1>
+    <form method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <textarea name="feedback" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <ul>
+        {% for i in feedbacks %}
+            <li><strong>{{i.name }}:</strong> {{i.feedback }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
